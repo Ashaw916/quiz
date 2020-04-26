@@ -11,7 +11,7 @@
 
 .btn-primary, .btn-dark {
     border-radius: 10px;
-    padding: 1rem 1rem;
+    padding: 1rem 2rem;
     margin: 3rem 0;
 }
 .center {
@@ -23,7 +23,7 @@ hr {
 }
 
 #answer {
-    padding: 1rem;
+    padding: 1rem 1rem;
 
 }
 

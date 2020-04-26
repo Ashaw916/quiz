@@ -1,42 +1,53 @@
 //array of question objects
 
-var questionObj = {   
-        q:{
-        question: "How many (conditions) must else  have?",
-        answers: ["0", "1", "2", "3"],
+var questions = [
+    {
+        question: "sgdfdfsdgssjfjshfg",
+        answers: [" ", " ", " ", " "],
         get correctAnswer() {
-            return this.answers[0];
-        }},
+            return this.answers[1];
+        }
+    },
+    {
+        question: "sgdfdfsdgssjfjshfg",
+        answers: [" ", " ", " ", " "],
+        get correctAnswer() {
+            return this.answers[1];
+        }
+    },
+    {
+        question: "sgdfdfsdgssjfjshfg",
+        answers: [" ", " ", " ", " "],
+        get correctAnswer() {
+            return this.answers[1];
+        }
+    },
+    {
+        question: "sgdfdfsdgssjfjshfg",
+        answers: [" ", " ", " ", " "],
+        get correctAnswer() {
+            return this.answers[1];
+        }
+    },
+    {
+        question: "sgdfdfsdgssjfjshfg",
+        answers: [" ", " ", " ", " "],
+        get correctAnswer() {
+            return this.answers[1];
+        }
+    }
+];
 
-        q:{
-        question: "How many (conditions) must else { } have?",
-        answers: ["0", "1", "2", "3"],
-        get correctAnswer() {
-            return this.answers[0];
-        }},
-        
-        q:{
-        question: "How many (conditions) must else { } have?",
-        answers: ["0", "1", "2", "3"],
-        get correctAnswer() {
-            return this.answers[0];
-        }},
-    
-        q:{
-        question: "How many (conditions) must else { } have?",
-        answers: ["0", "1", "2", "3"],
-        get correctAnswer() {
-            return this.answers[0];
-        }}};
-var currentQ = questionObj[questIndex].q.question;
-var questIndex = 0;
+var qIndex = 0;
+//var displayQuestion = document.getElementById("display-q");
+var currentQuestion = questions[qIndex].question;
     
 // variables to track score
 var score = 0;
 
 //variable for place in test
-var testPoint = 1;
-var buttons = [$("#a1"), $("#a2"), $("#a3")];
+var $testLocation = 0;
+var $buttons = [$("#a1"), $("#a2"), $("#a3")];
 
 //locations in html
 //  "test-sections"
@@ -64,53 +75,53 @@ $(document).ready(function() {
 
     $("#start-btn").attr("class", "hide")
 
-        // function setTime() {
-        //     var timerInterval = setInterval(function() {
-        //       $secondsLeft--;
-        //       $("#timer").text($secondsLeft + "seconds left.");
+        function setTime() {
+            var $timerInterval = setInterval(function() {
+              $secondsLeft--;
+              $("#timer").text($secondsLeft + "seconds left.");
           
-        //       if(secondsLeft === 0) {
-        //         clearInterval(timerInterval);
-        //         alert(score + " out of 4")
-        //       }
-        //     }, 1000);
-        //   }
+              if($secondsLeft === 0) {
+                clearInterval($timerInterval);
+                alert($score + " out of 4")
+              }
+            }, 1000);
+          }
 
-        //   function sendMessage() {
-        //     $("#timer").text(" ");
-        //   }
+          function sendMessage() {
+            $("#timer").text(" ");
+          }
           
-        //   setTime();
+          setTime();
     });
-//     function makeQuiz() {
+    function makeQuiz() {
 
-//         $("#question").text(currentQ);
+        $("#question").text($currentQ);
 
-//         for (i = 0; i < buttons.length; i++) {
-//             var addAnswers = questionbj[qIndex].answers;
-//             buttons[i].textContent = addAnswers[i];
-//         }
-//     }
-//     //event listener for each answer button
+        for (i = 0; i < $buttons.length; i++) {
+            var $addAnswers = $questionObj[$questIndex].answers;
+            $buttons[i].textContent = $addAnswers[i];
+        }
+    }
+    //event listener for each answer button
     
 
-//         //if else right answer
-//         function selectAnswer() {
+        //if else right answer
+        function selectAnswer() {
 
-//         }
+        }
 
-//             // display answer 
-//             //change answer text color depending on right/wrong
-//             //change score
-//             //change question number
+            // display answer 
+            //change answer text color depending on right/wrong
+            //change score
+            //change question number
 
-//     //event listener for next button
+    //event listener for next button
     
-//         //function to display next question object
-//         function nextQuestion() {
+        //function to display next question object
+        function nextQuestion() {
 
-//         }
-//         //change button to say done on last question and display score
+        }
+        //change button to say done on last question and display score
 
 
 });
