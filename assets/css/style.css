@@ -1,0 +1,43 @@
+
+*, ::before, ::after {
+    box-sizing: border-box
+
+}
+
+.jumbotron, h2{
+    text-align: center;
+    padding:2rem;
+}
+
+.btn-primary, .btn-dark {
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    margin: 3rem 0;
+}
+.center {
+    text-align: center;
+    align-content: center;
+}
+hr {
+
+}
+
+#answer {
+    padding: 1rem;
+
+}
+
+.wrong {
+    color:red;
+}
+.correct {
+    color:green;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+display: contents;
+}

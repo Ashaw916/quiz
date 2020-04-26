@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    
+
+<div class="container" id="main">
+
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid" id="jumbo">
+        <h1 class="display-4">Quiz</h1>
+        <h4>Javascript</h4>
+    </div>
+
+     <!--start button-->
+     <div class="col-md-12 center" >
+
+        <!--start button-->
+        <button class="btn-dark" id="start-btn">Start</button>
+        
+        
+    </div>
+    <!--div to hold portions of the test-->
+    <div id="test-section"></div>
+
+        
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <!--timer text-->
+                <h2 id="timer"></h2>
+
+            </div>
+
+        </div>
+
+        <!--div to hold questions-->
+        <div class="col-md-12">
+
+            <h2 id="question">Lorem ipsum dolor sit.</h2>
+            
+        </div>
+           
+
+       
+
+        <div class="row" id="answers">
+
+            <!-- buttons that dispays answers and causes correct answer to appear in confirm div-->
+            <div class="col-md-4">
+                <button class="btn-primary"><span id="a1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore ipsum recusandae.</span></button>
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn-primary"><span id="a2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore ipsum recusandae.</span></button>
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn-primary"><span id="a3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore ipsum recusandae.</span></button>
+            </div>
+        
+        </div>
+
+        <hr>
+
+        <!--div to display corret answer-->
+        <div class="row " id="confirm">
+
+            <div class="col-md-12">
+
+                <!--link answer-->
+                <h3 id="answer-text"> Lorem ipsum dolor sit.</h3>
+                
+            </div>
+            
+        </div>
+
+            <hr>
+
+        <div class="row ">
+
+            <div class="row">
+
+                <div class="col-md-12" >
+
+                    <!--button that displayes next question and answers-->
+                    <button class="btn-dark" id="next-btn">Next Question</button>
+
+                </div>
+               
+            </div>
+        
+        </div>
+
+    </div>  
+
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
+<!--
+    q1
+    who commanded the enterprise at the basttle of wolf 359
+    a1 jean-luc picard
+    a2 william t riker
+    a3 james t kirk
+    A=2
+
+    q2
+
+-->
+
+<!--
+    1. start page
+        title
+        start button
+    2. questoin pages x4
+        question
+        answer buttons
+        right/wrong massage
+        next button
+-->
