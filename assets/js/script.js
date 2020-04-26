@@ -1,6 +1,6 @@
 //array of question objects
 
-var questions = [
+var $questions = [
     {
         question: "sgdfdfsdgssjfjshfg",
         answers: [" ", " ", " ", " "],
@@ -38,16 +38,18 @@ var questions = [
     }
 ];
 
-var qIndex = 0;
-//var displayQuestion = document.getElementById("display-q");
-var currentQuestion = questions[qIndex].question;
+var $qIndex = 0;
+var $currentQuestion = $questions[$qIndex].question;
     
 // variables to track score
-var score = 0;
+var $score = 0;
 
 //variable for place in test
 var $testLocation = 0;
-var $buttons = [$("#a1"), $("#a2"), $("#a3")];
+var $a1 = $("#a1");
+var $a2 = $("#a2");
+var $a3 = $("#a3");
+var $buttons = [$a1, $a2, $a3];
 
 //locations in html
 //  "test-sections"
@@ -93,13 +95,15 @@ $(document).ready(function() {
           
           setTime();
     });
+
+
     function makeQuiz() {
 
         $("#question").text($currentQ);
 
         for (i = 0; i < $buttons.length; i++) {
-            var $addAnswers = $questionObj[$questIndex].answers;
-            $buttons[i].textContent = $addAnswers[i];
+            var $addAnswers = $questionObj[$qIndex].answers;
+            $buttons[i].text($addAnswers[i]);
         }
     }
     //event listener for each answer button
