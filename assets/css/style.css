@@ -1,9 +1,4 @@
 
-*, *::before, *::after {
-    box-sizing: border-box
-
-}
-
 .jumbotron, h2{
     text-align: center;
     padding:2rem;

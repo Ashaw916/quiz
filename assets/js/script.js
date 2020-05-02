@@ -1,39 +1,39 @@
 //question object
 var $questArray = [
     { 
-        question: "3?",
-        optionA: "1 ",
-        optionB: "2 ",
-        optionC: "3 ",
-        answer: "3 ",
+        question: "What symbol is used as a short hand for jquery",
+        optionA: "&",
+        optionB: "#",
+        optionC: "$",
+        answer: "$",
     },
     {
-        question: "1?",
-        optionA: "1 ",
-        optionB: "2 ",
-        optionC: "3 ",
-        answer: "1 ",
+        question: "How do you select html elements?",
+        optionA: "( )",
+        optionB: "$('  ')",
+        optionC: "$(< >)",
+        answer: "$('  ')",
     },
     {
-        question: "2?",
-        optionA: "1 ",
-        optionB: "2 ",
-        optionC: "3 ",
-        answer: "2 ",
+        question: "what would you use to change the text of an element?",
+        optionA: ".text()",
+        optionB: ".addText()",
+        optionC: ".attr()",
+        answer: ".text()",
     },
     {
-        question: "3?",
-        optionA: "1 ",
-        optionB: "2 ",
-        optionC: "3 ",
-        answer: "3 ",
+        question: "what is jquery",
+        optionA: "a coding language",
+        optionB: "a javascript library",
+        optionC: "an api",
+        answer: "a javascript library",
     },
     {
-        question: "2?",
-        optionA: "1 ",
-        optionB: "2 ",
-        optionC: "3 ",
-        answer: "2 ",
+        question: "How would you add a source to and image tag",
+        optionA: ".addClass()",
+        optionB: ".add()",
+        optionC: ".attr()",
+        answer: ".attr()",
     },
     {  
         question: " ",
@@ -189,7 +189,7 @@ $(document).ready(function() {
         // add one to test location
         $testLocation++;
         // clear confirm div
-
+        $("#confirm").text("");
         // call function to create quiz
         createQuestions();
         //call function to end
@@ -206,12 +206,14 @@ $(document).ready(function() {
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
             $("#confirm").append(initials + " ").append($score + " out of 5");
             $("#timer").addClass("hide");
+            $("#next-btn").addClass("hide");
             timer === 0;
         };
         if ($secondsLeft === 0) {
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
             $("#confirm").append(initials + " ").append($score + " out of 5");
             $("#timer").addClass("hide");
+            $("#next-btn").addClass("hide");
         };
     };  
 });
