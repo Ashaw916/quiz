@@ -27,11 +27,11 @@
         
     </div>
     <!--div to hold portions of the test-->
-    <div id="test-section"></div>
+    <div id="test-section" ></div>
 
         
 
-        <div class="row">
+        <div class="row hide" id="timer-div">
 
             <div class="col-md-12 center">
 
@@ -43,28 +43,28 @@
         </div>
 
         <!--div to hold questions-->
-        <div class="col-md-12 center">
+        <div class="col-md-12 center hide" id="question-div">
 
-            <h2 id="question">...</h2>
+            <h2 id="question"></h2>
             
         </div>
            
 
        
 
-        <div class="row center" id="answers">
+        <div class="row center hide" id="answers">
 
             <!-- buttons that dispays answers and causes correct answer to appear in confirm div-->
             <div class="col-md-4 center">
-                <button class="btn-primary"><span id="a1">...</span></button>
+                <button class="btn-primary optionBtn"><span id="a1">...</span></button>
             </div>
 
             <div class="col-md-4 center">
-                <button class="btn-primary"><span id="a2">...</span></button>
+                <button class="btn-primary optionBtn"><span id="a2">...</span></button>
             </div>
 
             <div class="col-md-4 center">
-                <button class="btn-primary"><span id="a3">...</span></button>
+                <button class="btn-primary optionBtn"><span id="a3">...</span></button>
             </div>
         
         </div>
@@ -72,12 +72,12 @@
         <hr>
 
         <!--div to display corret answer-->
-        <div class="row " id="confirm">
+        <div class="row hide" id="confirm">
 
             <div class="col-md-12 center">
 
                 <!--link answer-->
-                <h3 id="answer-text"> ...</h3>
+                <h3 id="answer-text"></h3>
                 
             </div>
             
@@ -87,7 +87,7 @@
 
         <div class="row ">
 
-            <div class="row">
+            <div class="row hide" id="next-div">
 
                 <div class="col-md-12 center" >
 
@@ -110,25 +110,3 @@
 </body>
 </html>
 
-<!--
-    q1
-    who commanded the enterprise at the basttle of wolf 359
-    a1 jean-luc picard
-    a2 william t riker
-    a3 james t kirk
-    A=2
-
-    q2
-
--->
-
-<!--
-    1. start page
-        title
-        start button
-    2. questoin pages x4
-        question
-        answer buttons
-        right/wrong massage
-        next button
--->
