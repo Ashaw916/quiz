@@ -55,11 +55,15 @@ var $buttons = [$a1, $a2, $a3];
 // timer
 var $secondsLeft = 60;
 var $interval;
+var answered = false;
+
 //event listener for document
 $(document).ready(function() {
 
     // event listener for start button
     $("#start-btn").on("click", function() {
+
+        answered = false;
         // hide start after click
         $("#start-btn").addClass("hide");
         //show everything after click
@@ -102,8 +106,11 @@ $(document).ready(function() {
 
     //event listener for a1 button
     $("#a1").on("click", function(){
-        // disable buttons
+        if (answered === true){
+            return;
+        }
         
+
         if (($questArray[$testLocation].optionA) === ($questArray[$testLocation].answer)) {
             console.log("correct");
             // change color to green if correct and change font size to 2rem
@@ -115,17 +122,21 @@ $(document).ready(function() {
             console.log("wrong");
             // change color to red if wrong and change font size to 2rem
             $("#confirm").css({"color": "red", "font-size": "2rem"});
-            $secondsLeft -10;
+            $secondsLeft -=10;
         };
 
         $("#confirm").text($questArray[$testLocation].answer);
         console.log($score);
         console.log($testLocation);
+        answered = true;
     });
 
     //event listener for a2 button
     $("#a2").on("click", function(){
-        // disable buttons
+        if (answered === true){
+            return;
+        }
+        
 
         if (($questArray[$testLocation].optionB) === ($questArray[$testLocation].answer)) {
             console.log("correct");
@@ -138,17 +149,20 @@ $(document).ready(function() {
             console.log("wrong");
             // change color to red if wrong and change font size to 2rem
             $("#confirm").css({"color": "red", "font-size": "2rem"});
-            $secondsLeft -10;
+            $secondsLeft -=10;
         }
 
         $("#confirm").text($questArray[$testLocation].answer);
         console.log($score);
         console.log($testLocation);
+        answered = true;
     });
 
     //event listener for a3 button
     $("#a3").on("click", function(){
-        // disable buttons
+        if (answered === true){
+            return;
+        }
 
         if (($questArray[$testLocation].optionC) === ($questArray[$testLocation].answer)) {
             console.log("correct");
@@ -161,22 +175,26 @@ $(document).ready(function() {
             console.log("wrong");
             // change color to red if wrong and change font size to 2rem
             $("#confirm").css({"color": "red", "font-size": "2rem"});
-            $secondsLeft --;
+            $secondsLeft -=10;
         }
         // show correct answer
         $("#confirm").text($questArray[$testLocation].answer)
         console.log($score);
         console.log($testLocation);
+        answered = true;
     });
 
     //event listener for next button
     $("#next-btn").on("click", function() {
         // add one to test location
         $testLocation++;
+        // clear confirm div
+
         // call function to create quiz
         createQuestions();
         //call function to end
         $endQuiz();
+        answered = false;
     });
 
     // end quiz,  show score, and hide everthing else
@@ -185,17 +203,15 @@ $(document).ready(function() {
             $("#next-btn").text("Done");
         }
         if ($testLocation === 5){
-            $("#confirm").text($score + " out of 5")
-            $("#timer").addClass("hide");
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
-            localStorage.setItem("initials", initials);
+            $("#confirm").append($score + " out of 5").append(initials);
+            $("#timer").addClass("hide");
+            timer === 0;
         };
         if ($secondsLeft === 0) {
-            $("#confirm").text($score + " out of 5")
-            $("#timer").addClass("hide");
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
-            var $scoreSave = $score;
-            localStorage.setItem("initials", initials);
+            $("#confirm").append($score + " out of 5").append(initials);
+            $("#timer").addClass("hide");
         };
     };  
 });
