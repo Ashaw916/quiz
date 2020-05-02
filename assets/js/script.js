@@ -204,13 +204,13 @@ $(document).ready(function() {
         }
         if ($testLocation === 5){
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
-            $("#confirm").append($score + " out of 5").append(initials);
+            $("#confirm").append(initials + " ").append($score + " out of 5");
             $("#timer").addClass("hide");
             timer === 0;
         };
         if ($secondsLeft === 0) {
             var initials = prompt("You Scored " + $score + " out of 5 " + "Enter Initials");
-            $("#confirm").append($score + " out of 5").append(initials);
+            $("#confirm").append(initials + " ").append($score + " out of 5");
             $("#timer").addClass("hide");
         };
     };  
