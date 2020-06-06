@@ -1,5 +1,6 @@
 # JS Quiz
 
+A showt Javascript quiz.
 ## License
 MIT License
 ## Authors 
